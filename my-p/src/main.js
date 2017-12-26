@@ -10,6 +10,6 @@ import './style/usage/modules/Appmain.scss'
 new Vue({
   el: '#app',
   router,
-  template: '<AppMain/>',
-  components: { AppMain }
+  template: '<App/>',
+  components: { App }
 })
