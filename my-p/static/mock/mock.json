@@ -1,0 +1,59 @@
+{
+ "errercode":0,
+ "errermsg":0,
+ "data":{
+	 "start":0,
+	 "count":10,
+	 "total":120,
+	 "subjects":[
+	  {
+		 "poster":"url",
+		 "posname":"ui设计师",
+		 "companyname":"阿里巴巴",
+		 "address":"北京海淀区",
+		 "express":"3年",
+		 "education":"硕士",
+		 "companytype":"知名企业" ,
+		 "jobtype":"设计师",
+		 "pay":"300元/日",
+		 "duration":"3天前"
+	 },
+	 {
+		 "poster":"url",
+		 "posname":"前端工程师",
+		 "companyname":"阿里巴巴",
+		 "address":"北京海淀区",
+		 "express":"6年",
+		 "education":"硕士",
+		 "companytype":"知名企业" ,
+		 "jobtype":"前端",
+		 "pay":"1300元/日",
+		 "duration":"3天前"
+	 },
+	 {
+		 "poster":"url",
+		 "posname":"php",
+		 "companyname":"百度科技",
+		 "address":"北京海淀区",
+		 "express":"5年",
+		 "education":"本科",
+		 "companytype":"知名企业" ,
+		 "jobtype":"后台",
+		 "pay":"800元/日",
+		 "duration":"3天前"
+	 },
+	 {
+		 "poster":"url",
+		 "posname":"UD",
+		 "companyname":"腾讯",
+		 "address":"北京昌平区",
+		 "express":"3年",
+		 "education":"硕士",
+		 "companytype":"知名企业" ,
+		 "jobtype":"游戏",
+		 "pay":"900元/日",
+		 "duration":"3天前"
+	 }
+   ]
+ }
+}
