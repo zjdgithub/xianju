@@ -10,8 +10,8 @@
 import signIn from './components/sign/signIn.vue'
 export default {
   name: 'app',
-  components:{signIn}
-  
+//components:{signIn}
+//
 }
 </script>
 
