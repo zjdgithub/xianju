@@ -96,6 +96,7 @@
               width:100%;
               flex:1;
               overflow: scroll;
+              margin-bottom:0.6rem;
               ul{
                   width:100%;
                   @include flexbox();

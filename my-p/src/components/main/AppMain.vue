@@ -14,19 +14,18 @@
 	</header>
 	<section class="banner">
          
-          
 	</section>
 	<nav>
 		<ul>
-			<router-link :to="{name:'HotPosition'}" tag="li">热门专区</router-link>
-			<router-link :to="{name:'PracticePosition'}" tag="li">实习专区</router-link>
-			<router-link :to="{name:'ParttimePosition'}" tag="li">兼职专区</router-link>
+			<router-link :to="{name:'HotPosition'}" tag="li" :key='1'>热门专区</router-link>
+			<router-link :to="{name:'PracticePosition'}" tag="li" :key="2">实习专区</router-link>
+			<router-link :to="{name:'ParttimePosition'}" tag="li" :key='3'>兼职专区</router-link>
 		</ul>
 	</nav>
 	<div class="hot">推荐职位</div>
 	<div class="list">
 		<ul>
-			<li v-for="pro in pros">
+			<router-link :to="{name:'PositionDetails',params:{id:pro},query:{content:'khkjj'}}" tag="li" v-for="pro in pros" :key="pro.id">
 				<div class="firstdiv"></div>
 				<div class="job">
 					<h2>{{pro.posname}}</h2>
@@ -38,7 +37,7 @@
 					<p>{{pro.pay}}</p>
 					<h3>{{pro.duration}}</h3>
 				</div>
-			</li>
+			</router-link>
 			
 		</ul>
 	</div>

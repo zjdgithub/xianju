@@ -15,7 +15,7 @@
 		 </div>	
 		 <div class="list">
 		 <ul>
-			<li v-for="pro in pros">
+		<router-link :to="{name:'PositionDetails',params:{id:pro},query:{content:'khkjj'}}" tag="li" v-for="pro in pros" :key="pro.id">
 				<div class="firstdiv"></div>
 				<div class="job">
 					<h2 >{{pro.posname}}</h2>
@@ -27,7 +27,7 @@
 					<p>{{pro.pay}}</p>
 					<h3>{{pro.duration}}</h3>
 				</div>
-			</li>
+			</router-link>
 			
 		</ul>
 	    </div>
