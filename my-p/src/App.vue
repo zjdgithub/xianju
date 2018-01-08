@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="app" class="container">
     <router-view/>
 	    <footer>
@@ -9,12 +10,20 @@
 				<router-link :to="{name:'AppMine'}" tag="li">我的</router-link>
 			</ul>
 		</footer>
+=======
+  <div id="app">
+  	
+    <signIn></signIn>
+   
+>>>>>>> guoyu
   </div>
 </template>
 
 <script>
+import signIn from './components/sign/signIn.vue'
 export default {
   name: 'app',
+<<<<<<< HEAD
   components:{
   }
 }
@@ -24,4 +33,13 @@ export default {
 #app  ul li.router-link-exact-active{
 	    background:brown;
  }
+=======
+  components:{signIn}
+  
+}
+</script>
+
+<style>
+
+>>>>>>> guoyu
 </style>

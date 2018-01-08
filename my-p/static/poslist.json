@@ -1,0 +1,10 @@
+{
+    "errcode": 0,
+    "errmsg": "",
+    "data": {
+       "user_id": "123",
+       "username": "lisi",
+       "msg":"登陆成功提示信息"
+      
+    }
+}

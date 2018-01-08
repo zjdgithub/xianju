@@ -10,7 +10,10 @@ import './style/usage/modules/Appmain.scss'
 new Vue({
   el: '#app',
   router,
+<<<<<<< HEAD
   store,
+=======
+>>>>>>> guoyu
   template: '<App/>',
   components: { App }
 })
