@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
+
 import AppMain from '@/components/main/AppMain'
 import AppChat from '@/components/main/AppChat'
 import HotPosition from "@/components/position/HotPosition"
@@ -11,7 +11,7 @@ import AppMine from "@/components/mine/AppMine"
 import AppInvitation from '@/components/mine/AppInvitation'
 import AppInvitationDetails from '@/components/mine/AppInvitationDetails'
 import AppProgress from '@/components/mine/AppProgress'
-import AppPositionMap from '@/components/map/map'
+//import AppPositionMap from '@/components/map/map'
 Vue.use(Router)
 
 export default new Router({                     
@@ -24,7 +24,6 @@ export default new Router({
     {path:'/AppMine',name:'AppMine',component:AppMine},
     {path:'AppInvitation',name:"AppInvitation",component:AppInvitation},
     {path:'/AppInvitationDetails',name:'AppInvitationDetails',component:AppInvitationDetails},
-    {path:'/AppProgress',name:'AppProgress',component:AppProgress},
-    {path:'/AppMap',name:'AppMap',component:AppPositionMap}
+    {path:'/AppProgress',name:'AppProgress',component:AppProgress}                          
   ]
 })
