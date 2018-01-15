@@ -1,62 +1,120 @@
-<template>
+   <template>
 	<div class="chatroom">
-		<p>num {{count}}   sum:  {{quantity}}</p>
-		<p>infoemation is : {{(showinfor())}}</p>
-		<button @click="increment">+</button>
-		<br/>
-		<button @click="decrement">-</button>
+		<div class="head"></div><!--聊吧顶部可放组件-->
+		<ul class="navv">
+			<li @click='typeClick("all")' :class="{showborder:type == 'all'}">全部</li>
+			<li @click='typeClick("schoolfriends")' :class="{showborder:type == 'schoolfriends'}">校友</li>
+			<li @click='typeClick("friends")' :class="{showborder:type == 'friends'}">同行</li>
+			<li @click='typeClick("hr")' :class="{showborder:type == 'hr'}">HR</li>
+		</ul>
+		<appChatList :pros="pros"></appChatList>
+		
 	</div>
+	
 </template>
 
 <script>
-	import {mapState,mapMutations,mapGetters} from 'vuex'
+	import appChatList from './AppChatList'
 	
 	export default{
 		name:"AppChat",
-		methods:{
-			...mapMutations({
-			increment:'increment',
-			decrement:'decrement'
-	     }),
-	     ...mapGetters({showinfor:"showinfo"})
-//		   showInfo:function(m){
-//		   	  console.log(this.$store.getters);
-//		   	   return this.$store.getters.showinfo(m);
-//		    }
-		},
-		//{
-//			
-////			add:function(pay){
-////				this.$store.commit({
-////					type:'increment',
-////					pay
-////				})
-////			}
-//		},
-		mounted(){
-			console.log(this);
-		},
-		computed:{
-			...mapState({
-			count:(state)=>{
-				return state.count;
-			},
-			quantity:state=>{
-				return state.quantity;
+		data(){
+			return {
+				activeIndex:0,
+				type:'all',
+				pros:[],
+				allpros:[]
 			}
-		  }),
+		},
+		methods:{
+			typeClick:function(type){
+				this.type = type
+//				console.log(this.type)
+				this.changeType(type)
+			},
+			changeType:function(type){
+				let pros = []
+				if(type == "schoolfriends"){
+//					alert(1)
+					this.allpros.map((item,i)=>{
+						if(item.ref == "schoolfriends"){
+							pros.push(item)
+//							console.log(pros)
+						}
+					})
+					return this.pros = pros
+				}else
+				if(this.type == "friends"){
+					this.allpros.map((item,i)=>{
+						if(item.ref == "friends"){
+							pros.push(item)
+//							console.log(pros)
+						}
+					})
+					return this.pros = pros
+				}else
+				if(this.type == "hr"){
+					this.allpros.map((item,i)=>{
+						if(item.ref == "hr"){
+							pros.push(item)
+//							console.log(pros)
+						}
+					})
+					return this.pros = pros
+				}else{
+					return this.pros = this.allpros
+				}
+			}
+		},
+		mounted(){
+			fetch('/api/chatwith/chat').then((response)=>response.json())
+			  .then((res)=>{
+//			  	console.log(res.data.subjects);
+			  	this.allpros=res.data.subjects;
+			  	this.pros = this.allpros;
+//			  	console.log(this.allpros);
+			  })
+		},
 		
-		   
-		//公共仓库，store 一个项目只有一个storage
+		components:{appChatList}
+		
+		
+
+		
 	}
-}
-	// ...mapstate  展开运算符
 </script>
 
-<style>
-	button{
-		width:80px;
-		background:#42B983;
-		color:red;
+<style lang="scss" scoped>
+
+	@import '../../style/usage/core/reset.scss';
+	.chatroom{
+    width:100%;
+    height:100%;
+	    .head{
+	    width:100%;
+	    height:0.44rem;
+	    background: #12c4b8;
+	
+	    }
+		    .navv{
+		    width:100%;
+		    font-size: 0.18rem;
+		    @include flexbox();
+		    @include justify-content(space-around);
+			    li{
+			        width:0.4rem;
+			        height:0.4rem;
+			        
+			        text-align: center;
+			        line-height: 0.4rem;
+			        color:#333333;
+			        
+			    }
+			    .showborder{
+			    	@include border(0 0 1px 0,#12c4b8,solid)
+			    }
+			}
+
 	}
+
 </style>

@@ -11,7 +11,7 @@ import AppMine from "@/components/mine/AppMine"
 import AppInvitation from '@/components/mine/AppInvitation'
 import AppInvitationDetails from '@/components/mine/AppInvitationDetails'
 import AppProgress from '@/components/mine/AppProgress'
-
+import AppPositionMap from '@/components/map/map'
 Vue.use(Router)
 
 export default new Router({                     
@@ -24,6 +24,7 @@ export default new Router({
     {path:'/AppMine',name:'AppMine',component:AppMine},
     {path:'AppInvitation',name:"AppInvitation",component:AppInvitation},
     {path:'/AppInvitationDetails',name:'AppInvitationDetails',component:AppInvitationDetails},
-    {path:'/AppProgress',name:'AppProgress',component:AppProgress}
+    {path:'/AppProgress',name:'AppProgress',component:AppProgress},
+    {path:'/AppMap',name:'AppMap',component:AppPositionMap}
   ]
 })

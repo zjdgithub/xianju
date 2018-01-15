@@ -1,3 +1,6 @@
 {
+    "/api/chatwith/chat":"/chat",
 	"/api/position/list":"/list"
+	
 }
+

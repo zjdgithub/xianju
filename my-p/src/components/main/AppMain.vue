@@ -2,8 +2,8 @@
 <div class="main">
 	<header>
 	<div class="top">
-       <div calss="city">
-       	  <span> 北京</span>
+       <div class="city">
+       	  <router-link v-model="position" class="position" to="AppMap">{{position}}</router-link>
        	  <i class="fa fa-chevron-down" aria-hidden="true"></i>
        </div>
        <div class="search">
@@ -49,16 +49,33 @@
 		name:"AppMain",
 		data:function(){
 			return {
+				position: "定位中",
 				pros:[],
 			};
 		},
-		methods:{},
+		methods:{
+			load:function(){
+		  		this.position = localStorage.position
+		  	}  
+		},
 		mounted(){
+			let that = this
+		  	let timeout  = setInterval(function(){
+		  		//alert(1)
+		  		
+		  		that.load()
+		  		console.log(1)
+		  		if(that.position != '定位中'){
+		  			clearInterval(timeout);
+		  		}
+		  	},1000)
+			
 			fetch('/api/position/list').then((response)=>response.json())
 			  .then((res)=>{
 			  	console.log(res.data.subjects);
 			  	this.pros=res.data.subjects;
 			  })
+			
 		}
 	}
 </script>

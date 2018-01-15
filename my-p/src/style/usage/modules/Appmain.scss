@@ -1,10 +1,12 @@
 @import '../core/reset.scss';
-<<<<<<< HEAD
+
     body,html{
        height:100%;
        width:100%;
        overflow: scroll;
     }
+    
+    
    .container{
        width:100%;
        @include flexbox();
@@ -28,14 +30,15 @@
                      @include border(1px,#333,solid,0.3rem);
                      align-items: center;
                      justify-content: space-between;
-                     padding:0.2rem;
+                     
                      background:#fff;
                      .city{
                          width:20%;
                          color:#42B983;
                          font-size:0.14rem;
-                         line-height:0.44rem;
+                         
                          border-right:1px solid #999;
+                         
                      }
                     .search{
                         padding-top:0.03rem;
@@ -194,9 +197,9 @@
               
           }
   }
-=======
+
 
 @import './signUp.scss';
 
 @import './signIn.scss';
->>>>>>> guoyu
+
