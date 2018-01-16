@@ -1,57 +1,46 @@
 <template>
 	<div class="practiceposition">
-		<h2 class="title">
-			<router-link tag="i" :to="{name:'AppMain'}"><i class="fa fa-chevron-left" aria-hidden="true"></i></router-link>
-			<span>
-				实习专区
-			</span>
-		
-		</h2>
+		<title-nav>实习专区</title-nav>
 		 <div class="nav">
 		 	  <ul>
-		 	  	<li>转正机会</li>
-		 	  	<li>短期实习</li>
-		 	  	<li class="noborder">寒假实习</li>
+		 	  	<li class="act">转正机会<span></span></li>
+		 	  	<li>短期实习<span></span></li>
+		 	  	<li class="noborder">寒假实习<span></span></li>
 		 	  </ul>
-		 	
+		 	  
 		 </div>
-		 <div class="list">
-		 <ul>
-			<router-link :to="{name:'PositionDetails',params:{id:pro},query:{content:'khkjj'}}" tag="li" v-for="pro in pros" :key="pro.id">
-				<div class="firstdiv"></div>
-				<div class="job">
-					<h2 >{{pro.posname}}</h2>
-					<h3>{{pro.companytype}}</h3>
-					<p><span>{{pro.address}}</span>&nbsp;&nbsp;<span>{{pro.express}}</span>&nbsp;&nbsp;<span>{{pro.education}}</span></p>
-				    <h5><span>{{pro.companyname}}</span>&nbsp;&nbsp;<span>{{pro.jobtype}}</span></h5>
-				</div>
-				<div class="pay">
-					<p>{{pro.pay}}</p>
-					<h3>{{pro.duration}}</h3>
-				</div>
-			</router-link>
-			
-		</ul>
+		
+	    <div class="lists">
+	    	<div class="list" v-for="i in 10">
+	    		<div class='left'>
+	    			<img src="../../../static/img/companypic/2.png"/>
+	    		</div>
+	    		<div class="right">
+	    			<div class="center">
+	    			<h3>内容运营管培生</h3>
+	    			<p>白石互动</p>
+	    			<h4><span>北京</span>&nbsp;&nbsp;<span>本科</span>&nbsp;&nbsp;<span>五天/周</span></h4>
+	    		    </div>
+	    		    <div class="pay">
+		    			<h3>100-120/天</h3>
+		    			<p>01-30</p>
+	    		     </div>
+	    			
+	    		</div>
+	    	</div>
 	    </div>
-	
 		
 	</div>
 </template>
 
 <script>
+	
+	import TitleNav from '../pubcomponents/TopNav'
 	export default{
 		name:"PracticePosition",
-		data:function(){
-			return {
-				pros:[]
-			}
-		},
-		mounted(){
-			fetch('/api/position/list').then((response)=>response.json())
-			  .then((res)=>{
-			  	console.log(res.data.subjects);
-			  	this.pros=res.data.subjects;
-			  })
+		components:{
+			
+			TitleNav
 		}
 	}
 </script>

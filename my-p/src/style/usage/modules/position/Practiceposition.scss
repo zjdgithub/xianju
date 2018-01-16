@@ -1,27 +1,11 @@
 @import '../../core/reset.scss';
-@import '../pub/listofposition.scss';
+
 .practiceposition{
         width:100%;
         height:100%;
         @include flexbox();
         @include flex-direction(column);
-        .title{
-            height:0.6rem;
-            line-height: 0.6rem;
-            background:#42B983;
-            
-           i{
-               width:40%;
-               padding:0.1rem;
-               font-size:0.16rem;
-               
-               
-           }
-           span{
-               font-size:0.18rem;
-           }
-        }
-       
+        background:#ffffff;
          .nav{
              width:100%;
              height:0.5rem;
@@ -36,12 +20,86 @@
                     text-align: center;
                     @include border(0 1px 0 0,#333,solid);
                     font-size:0.18rem;
+              
+                    span{
+                        display:block;
+                        width:70%;
+                        height:2px;
+                        background:#12c4b8;
+                        position:relative;
+                        margin:0 auto;
+                        top:5px;
+                       display:none;
+                    }
+                 }
+                 .act{
+                     color:#51d4cb;
+                     span{
+                         display:block;
+                     }
                  }
                  .noborder{
                      @include border(0,#fff,solid);
                  }
              }
              
+         }
+         .lists{
+             @include flex();
+             width:100%;                     
+            margin-bottom: 0.44rem;
+             overflow:scroll;
+             .list{
+                width:100%;
+                height:0.81rem;
+              
+                @include flexbox();
+                box-sizing: border-box;
+                @include align-items(center);
+                padding:0.10rem;
+                @include border(0 0 0.6px 0,#b4b4b4,solid)
+               .left{
+                  
+                   width:0.63rem;
+                   img{
+                       width:100%;
+                   }
+                }
+                .right{
+                    @include flex();
+                    @include flexbox();
+                    @include justify-content(space-between);
+                    margin-left:0.12rem;
+                    .center{
+                        h3{
+                            font-size:0.14rem;
+                            color:#333333;
+                            
+                        }
+                        p{
+                            font-size: 0.13rem;
+                            color:#666666;
+                        }
+                        h4{
+                            color:#d6d6d6;
+                            font-size:0.12rem;
+                            
+                        }
+                    }
+                    .pay{
+                        height:100%;
+                        h3{
+                            color:#c0efec;
+                            font-size:0.15rem;
+                        }
+                        p{
+                            text-align:right;
+                            color:#b4b4b4;
+                            font-size:0.12rem;
+                        }
+                    }
+                }
+             }
          }
         
          

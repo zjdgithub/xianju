@@ -1,56 +1,31 @@
 <template>
 	<div class="hotposition">
-		<h2 class="title">
-			<router-link tag="i" :to="{name:'AppMain'}"><i class="fa fa-chevron-left" aria-hidden="true"></i></router-link>
-			<span>
-				热门专区
-			</span>
-		
-		</h2>
+		 <TitleNav>
+		 	热门专区
+		 </TitleNav>
 		 	
 		 <div class="banner">
 		 	 <div class="imgs">
-		 	 	banner
+		 	 	<img src="../../../static/img/banner/hotbanner.png" title="xianju"/>
+		 	 	
+		 	 </div>
+		 	 <div class="pic">
+		 	 	<img src="../../../static/img/banner/jinxuan.png" alt="tltle" title="xianju"/>
+		 	 	<img src="../../../static/img/banner/guoyou.png" alt="pic" title="xianju"/>
 		 	 </div>
 		 </div>	
-		 <div class="list">
-		 <ul>
-		<router-link :to="{name:'PositionDetails',params:{id:pro},query:{content:'khkjj'}}" tag="li" v-for="pro in pros" :key="pro.id">
-				<div class="firstdiv"></div>
-				<div class="job">
-					<h2 >{{pro.posname}}</h2>
-					<h3>{{pro.companytype}}</h3>
-					<p><span>{{pro.address}}</span>&nbsp;&nbsp;<span>{{pro.express}}</span>&nbsp;&nbsp;<span>{{pro.education}}</span></p>
-				    <h5><span>{{pro.companyname}}</span>&nbsp;&nbsp;<span>{{pro.jobtype}}</span></h5>
-				</div>
-				<div class="pay">
-					<p>{{pro.pay}}</p>
-					<h3>{{pro.duration}}</h3>
-				</div>
-			</router-link>
-			
-		</ul>
-	    </div>
+		<PositionsList></PositionsList>
 	
 		
 	</div>
 </template>
 
 <script>
+	import PositionsList from './positionslist'
+	import TitleNav from '../pubcomponents/TopNav'
 	export default{
 		name:"HotPosition",
-		data:function(){
-			return {
-				pros:[]
-			}
-		},
-		mounted(){
-			fetch('/api/position/list').then((response)=>response.json())
-			  .then((res)=>{
-			  	console.log(res.data.subjects);
-			  	this.pros=res.data.subjects;
-			  })
-		}
+		components:{PositionsList,TitleNav}
 	}
 </script>
 

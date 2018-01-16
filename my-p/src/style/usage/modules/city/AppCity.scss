@@ -1,0 +1,97 @@
+@import '../../core/reset.scss';
+ .findcity{
+    width:100%;
+    height:100%;
+    overflow:scroll;
+    background:#fff;
+    position:relative;
+    z-index:9999;
+   .az{
+       width:0.2rem;
+       height:4rem;
+       position:fixed;
+       top:1.05rem;
+       right:0.05rem;
+       ul{
+           width:100%;
+           @include flexbox();
+           @include flex-direction(column);
+           height:100%;
+           li{
+               @include flex(1);
+               text-align:center;
+               width:100%;
+               line-height:0.2rem;
+               font-size:0.12rem;
+               color:#12c4b8;
+           }
+       }
+   }
+   .find,.nowCity,.hotCity{
+        
+        width:100%;
+        height:auto;
+         box-sizing: border-box;
+        padding:0.1rem;
+        p{
+            width:100%;
+            line-height:0.31rem;
+            span{
+                margin-left:0.09rem;
+                color:#333333;
+                font-size:0.14rem;
+            }
+            
+        }
+        .cityname{
+            @include flexbox();
+            width:100%;
+            margin-top:0.12rem;
+            flex-wrap: wrap;
+          
+            span{
+                width:0.89rem;
+                height:0.25rem;
+//              @include border(0.007rem,#dadada,solid);
+                 display:block;
+               
+                 border:0.007rem solid #dadada;
+                text-align:center;
+                line-height:0.25rem;
+                color:#666666;
+                border-radius: 0.13rem;
+            }
+        }
+    }
+    .nowCity{
+        .cityname{
+            box-sizing: border-box;
+            padding-left:0.1rem;
+        }
+    }
+    .find,.hotCity{
+        .cityname{
+           
+             
+              span{
+                  margin:0 0.1rem 0.1rem;
+              }
+        }
+    }
+    .find{
+       p{
+           span{
+               display:block;
+               width:0.17rem;
+               height:0.17rem;
+               background:#12c4b8;
+               border-radius: 100%;
+               font-size:0.14rem;
+               color:#ffffff;
+               text-align:center;
+               line-height:0.17rem;
+           }
+       }
+        
+    }
+  }

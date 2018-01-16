@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
+
 import AppMain from '@/components/main/AppMain'
 //import AppChat from '@/components/main/AppChat'
 import HotPosition from "@/components/position/HotPosition"
@@ -15,6 +15,12 @@ import AppInvitationDetails from '@/components/mine/AppInvitationDetails'
 import AppProgress from '@/components/mine/AppProgress'
 
 import AppChat from '@/components/chat/chatingYo'
+
+import AppSign from "@/components/sign/signUpandIn"
+import AppSignUp from "@/components/sign/signUp"
+import AppSignIn from "@/components/sign/signIn"
+import AppFindPass from "@/components/sign/reset"
+ import AppCity from '@/components/localtion/city'
 Vue.use(Router)
 
 export default new Router({                     
@@ -28,6 +34,12 @@ export default new Router({
     {path:'AppInvitation',name:"AppInvitation",component:AppInvitation},
     {path:'/AppInvitationDetails',name:'AppInvitationDetails',component:AppInvitationDetails},
     {path:'/AppProgress',name:'AppProgress',component:AppProgress},
-    {path:'AppChat',name:'AppChat',component:AppChat}
+    {path:'AppChat',name:'AppChat',component:AppChat},
+    {path:'AppSign',name:'AppSign',component:AppSign},
+    {path:'AppSignUp',name:'AppSignUp',component:AppSignUp},
+    {path:'AppSignIn',name:'AppSignIn',component:AppSignIn},
+    {path:'AppFindPass',name:'AppFindPass',component:AppFindPass},
+    {path:'AppCity',name:'AppCity',component:AppCity},
+     
   ]
 })

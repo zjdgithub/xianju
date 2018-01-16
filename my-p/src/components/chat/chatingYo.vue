@@ -63,6 +63,7 @@
 				
 			},
 			loadMore:function() {
+				console.log(1);
 				setTimeout(()=>{
 					 this.loading = true
 			         this.getItems();

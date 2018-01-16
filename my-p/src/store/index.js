@@ -4,29 +4,28 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 //定义 store
  const state ={
- 	count : 0,
- 	quantity:10,
- 	pers:[{age:18,name:"zj"},{age:24,name:"zn"},{age:19,name:'sh'}]
+  location:"定位中"
  }
  const mutations ={
- 	increment(state){
- 		state.count++;
- 	},
- 	
-    decrement(state){
- 			state.count--;
+ 	changeCity:function(state,newCity){
  		
- 	  }
+ 		state.location=newCity;
+ 	}
  }
  const getters ={
  	showinfo: (state)=>{
- 		//vuex的数组遍历的方式，find ()的查找，添加条件。
- 		return state.pers.find(per=> per.name=='zj').age;
+ 		
+ 	}
+ }
+ const actions={
+ 	changeCity:function(content,newCity){
+ 		content.commit('changeCity',newCity)
  	}
  }
   //暴露出去 state 
   export default new Vuex.Store({
   	state,
   	mutations,
-  	getters
+  	getters,
+  	actions
   })

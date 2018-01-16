@@ -8,7 +8,7 @@
 	 "subjects":[
 	  {
 		  "id":1,
-		 "poster":"url",
+		 "poster":"../../../static/img/companypic/pic_03.png",
 		 "posname":"ui设计师",
 		 "companyname":"阿里巴巴",
 		 "address":"北京海淀区",
@@ -21,7 +21,7 @@
 	 },
 	 {
 		 "id":2,
-		 "poster":"url",
+		 "poster":"../../../static/img/companypic/pic_06.png",
 		 "posname":"前端工程师",
 		 "companyname":"阿里巴巴",
 		 "address":"北京海淀区",
@@ -34,7 +34,7 @@
 	 },
 	 {
 		 "id":3,
-		 "poster":"url",
+		 "poster":"../../../static/img/companypic/pic_08.png",
 		 "posname":"php",
 		 "companyname":"百度科技",
 		 "address":"北京海淀区",
@@ -47,7 +47,7 @@
 	 },
 	 {
 		 "id":4,
-		 "poster":"url",
+		 "poster":"../../../static/img/companypic/pic_10.png",
 		 "posname":"UD",
 		 "companyname":"腾讯",
 		 "address":"北京昌平区",
@@ -57,7 +57,110 @@
 		 "jobtype":"游戏",
 		 "pay":"900元/日",
 		 "duration":"3天前"
-	 }
+	 },
+	 {
+		  "id":5,
+		 "poster":"../../../static/img/companypic/pic_03.png",
+		 "posname":"品面设计师",
+		 "companyname":"阿里科技",
+		 "address":"北京海淀区",
+		 "express":"2年",
+		 "education":"本科",
+		 "companytype":"发展中企业" ,
+		 "jobtype":"设计师",
+		 "pay":"200元/日",
+		 "duration":"1~3日前"
+	 },
+	 {
+		 "id":6,
+		 "poster":"../../../static/img/companypic/pic_06.png",
+		 "posname":"测试经理",
+		 "companyname":"恒大科技",
+		 "address":"北京昌平区",
+		 "express":"6年",
+		 "education":"硕士",
+		 "companytype":"企业" ,
+		 "jobtype":"测试",
+		 "pay":"1300元/日",
+		 "duration":"30天前"
+	 },
+	 {
+		 "id":7,
+		 "poster":"../../../static/img/companypic/pic_08.png",
+		 "posname":"php",
+		 "companyname":"百度科技",
+		 "address":"北京海淀区",
+		 "express":"5年",
+		 "education":"本科",
+		 "companytype":"知名企业" ,
+		 "jobtype":"后台",
+		 "pay":"800元/日",
+		 "duration":"3天前"
+	 },
+	 {
+		 "id":8,
+		 "poster":"../../../static/img/companypic/pic_10.png",
+		 "posname":"UD",
+		 "companyname":"腾讯",
+		 "address":"北京昌平区",
+		 "express":"3年",
+		 "education":"硕士",
+		 "companytype":"知名企业" ,
+		 "jobtype":"游戏",
+		 "pay":"900元/日",
+		 "duration":"3天前"
+	 }, {
+		  "id":9,
+			 "poster":"../../../static/img/companypic/pic_03.png",
+			 "posname":"ui设计师",
+			 "companyname":"阿里巴巴",
+			 "address":"北京海淀区",
+			 "express":"3年",
+			 "education":"硕士",
+			 "companytype":"知名企业" ,
+			 "jobtype":"设计师",
+			 "pay":"300元/日",
+			 "duration":"3天前"
+		 },
+		 {
+			 "id":10,
+			 "poster":"../../../static/img/companypic/pic_06.png",
+			 "posname":"ai工程师",
+			 "companyname":"百度AI有限公司",
+			 "address":"北京海淀区",
+			 "express":"1年",
+			 "education":"硕士",
+			 "companytype":"知名企业" ,
+			 "jobtype":"人工智能",
+			 "pay":"1300元/日",
+			 "duration":"3天前"
+		 },
+		 {
+			 "id":11,
+			 "poster":"../../../static/img/companypic/pic_08.png",
+			 "posname":"php",
+			 "companyname":"soho科技",
+			 "address":"北京三里屯",
+			 "express":"5年",
+			 "education":"本科",
+			 "companytype":"知名企业" ,
+			 "jobtype":"后台",
+			 "pay":"800元/日",
+			 "duration":"3天前"
+		 },
+		 {
+			 "id":12,
+			 "poster":"../../../static/img/companypic/pic_10.png",
+			 "posname":"UD",
+			 "companyname":"腾讯",
+			 "address":"北京昌平区",
+			 "express":"3年",
+			 "education":"硕士",
+			 "companytype":"知名企业" ,
+			 "jobtype":"游戏",
+			 "pay":"900元/日",
+			 "duration":"3天前"
+		 }
    ]
  }
 }
