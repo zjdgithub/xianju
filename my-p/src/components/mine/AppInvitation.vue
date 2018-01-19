@@ -1,13 +1,10 @@
 <template>
 	<div class="appinvitation">
 		
-		<h2 class="title">
-			<router-link tag="i" :to="{name:'AppMine'}"><i class="fa fa-chevron-left" aria-hidden="true"></i></router-link>
-			<span>
-				面试邀请
-			</span>
-		
-		</h2>
+		<TopNav>
+			<span slot='info'>面试邀请</span>
+		     <span slot="img"></span>
+		</TopNav>
 		<div class="box-invitations">
 		    <div class="invitation" v-for="n in 8">
 		    	<div class="info">
@@ -36,8 +33,12 @@
 </template>
 
 <script>
+	import TopNav from '../pubcomponents/TopNav3'
 	export default {
-		name:"AppInvitation"
+		name:"AppInvitation",
+		components:{
+			TopNav
+		}
 	}
 </script>
 

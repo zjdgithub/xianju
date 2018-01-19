@@ -1,12 +1,11 @@
 <template>
 	<div class="progress">
-		<h2 class="title">
-			<router-link tag="i" :to="{name:'AppInvitation'}"><i class="fa fa-chevron-left" aria-hidden="true"></i></router-link>
-			<span>
-				投递进展
-			</span>
 		
-		</h2>
+		<TopNav>
+			<span slot="info">投递进展</span>
+			<span slot="img"></span>
+			
+		</TopNav>
 		<div class="box">
 			<div v-for="i in 7" class="progresslist">
 				<h2><span>职位名称</span>&nbsp;&nbsp;<b>(薪资)</b></h2>
@@ -18,8 +17,12 @@
 </template>
 
 <script>
+	import TopNav from '../pubcomponents/TopNav3'
 	export default{
-		name:'AppProgress'
+		name:'AppProgress',
+		components:{
+			TopNav
+		}
 	}
 </script>
 

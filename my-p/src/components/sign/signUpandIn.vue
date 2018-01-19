@@ -25,6 +25,9 @@
 <script>
 	export default{
 		name:'AppSign',
+		data(){
+			return {}
+		}
 	}
 </script>
 

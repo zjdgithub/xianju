@@ -14,16 +14,24 @@ import AppInvitation from '@/components/mine/AppInvitation'
 import AppInvitationDetails from '@/components/mine/AppInvitationDetails'
 import AppProgress from '@/components/mine/AppProgress'
 
-import AppChat from '@/components/chat/chatingYo'
+import AppResume from '@/components/resume/AppResume'
+
+import AppChat from '@/components/chat/AppChat'
+import AppChatDetails from '@/components/chat/chatDetails'
+import AppSearch from '@/components/chat/search'
 
 import AppSign from "@/components/sign/signUpandIn"
 import AppSignUp from "@/components/sign/signUp"
 import AppSignIn from "@/components/sign/signIn"
 import AppFindPass from "@/components/sign/reset"
  import AppCity from '@/components/localtion/city'
+
+//import AppPositionMap from '@/components/map/map'
+
 Vue.use(Router)
 
-export default new Router({                     
+export default new Router({
+  mode:"history",
   routes: [
     {path: '/',name: 'AppMain',component: AppMain },
     {path:'/HotPosition',name:"HotPosition",component:HotPosition},
@@ -33,13 +41,16 @@ export default new Router({
     {path:'/AppMine',name:'AppMine',component:AppMine},
     {path:'AppInvitation',name:"AppInvitation",component:AppInvitation},
     {path:'/AppInvitationDetails',name:'AppInvitationDetails',component:AppInvitationDetails},
+    {path:'/AppResume',name:'AppResume',component:AppResume},
+    {path:'/AppChat',name:'AppChat',component:AppChat},
+     {path:'/AppChatDetails',name:'AppChatDetails',component:AppChatDetails},
+    {path:'/AppSign',name:'AppSign',component:AppSign},
+    {path:'/AppSignUp',name:'AppSignUp',component:AppSignUp},
+    {path:'/AppSignIn',name:'AppSignIn',component:AppSignIn},
+    {path:'/AppFindPass',name:'AppFindPass',component:AppFindPass},
+    {path:'/AppCity',name:'AppCity',component:AppCity},
     {path:'/AppProgress',name:'AppProgress',component:AppProgress},
-    {path:'AppChat',name:'AppChat',component:AppChat},
-    {path:'AppSign',name:'AppSign',component:AppSign},
-    {path:'AppSignUp',name:'AppSignUp',component:AppSignUp},
-    {path:'AppSignIn',name:'AppSignIn',component:AppSignIn},
-    {path:'AppFindPass',name:'AppFindPass',component:AppFindPass},
-    {path:'AppCity',name:'AppCity',component:AppCity},
-     
+    {path:'/AppSearch',name:'AppSearch',component:AppSearch}
+
   ]
 })

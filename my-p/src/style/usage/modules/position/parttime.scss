@@ -22,6 +22,9 @@
                     @include border(0 1px 0 0,#333,solid);
                     font-size:0.18rem;
                  }
+                 .act{
+                     color:#00AFC7;
+                 }
                  .noborder{
                      @include border(0,#fff,solid);
                  }

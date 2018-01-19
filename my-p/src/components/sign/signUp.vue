@@ -11,18 +11,18 @@
 			<form action="">
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_03.png" alt="pic "  title="xianju"/>
-					<p> <input type="text" placeholder="请输入手机号" /></p>
+					<p> <input type="text" v-model="usetel" placeholder="请输入手机号" /></p>
 				</div>
 				
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_08.png" alt="pic "  title="xianju"/>
-					<p> <input type="password" placeholder="请设置密码" /></p>
+					<p> <input type="password" placeholder="请设置密码" v-model="usepassword" /></p>
 				</div>
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_08.png" alt="pic "  title="xianju"/>
-					<p> <input type="password" placeholder="请确认密码" /></p>
+					<p> <input type="password" v-model="repassword" placeholder="请确认密码" /></p>
 				</div>
-				<button type="submit" >注册</button>
+				<button type="button" @click="register">注册</button>
 			</form>
 		</div>
 		<div class="agreement">
@@ -33,7 +33,35 @@
 	
 <script>
 	export default {
-		name: 'signUp'
+		name: 'signUp',
+		data(){
+			return {
+				usetel:'',
+				usepassword:'',
+				repassword:''
+			}
+		},
+		methods:{
+			register(){
+			    if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(this.usetel))){
+			    	alert("请输入正确的11位手机号");
+			    	return false;
+			    }
+			    else{
+			    	if(this.usepassword!=this.repassword){
+			    		alert("两次密码不一致");
+			    		return false;
+			    	}
+			    	else{
+			    		var user={usetel:this.usetel,usepassword:this.usepassword};
+			    		localStorage.User=JSON.stringify(user);
+			    		console.log(localStorage.User);
+			    		 this.$router.push('/AppSignIn');
+			    		
+			    	}
+			    }
+			}
+		}
 	}
 </script>
 	
@@ -42,6 +70,9 @@
 		width:100%;
 		height:100%;
 		background:#fff;
+		overflow: scroll;
+		position:relative;
+		z-index:9999;
 	   	.signbg{
 	   		width:100%;
 	   		height:3rem;
@@ -63,7 +94,7 @@
       	width:100%;
       	height:2.3rem;
       	background:rgba(255,255,255,0);
-      	margin-top:-0.40rem;
+      	margin-top:-0.60rem;
       	z-index:999;
       	form{
       		height:100%;
@@ -115,7 +146,7 @@
       	height:0.88rem;
       	background:#fff;
      
-      	position:fixed;
+      
       	bottom:0;
       	left:0;
       	z-index:9999;

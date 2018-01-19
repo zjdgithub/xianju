@@ -1,3 +1,6 @@
 {
-	"/api/position/list":"/list"
+    "/api/chatwith/chat":"/chat",
+	"/api/position/list":"/list",
+	"api/position/practice":"practice"
 }
+

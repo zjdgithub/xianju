@@ -11,18 +11,18 @@
 			<form action="">
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_03.png" alt="pic "  title="xianju"/>
-					<p> <input type="text" placeholder="请输入手机号" /></p>
+					<p> <input type="text" placeholder="请输入你的已注册手机号" v-model="usetel"/></p>
 				</div>
 				
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_08.png" alt="pic "  title="xianju"/>
-					<p> <input type="password" placeholder="请重置密码" /></p>
+					<p> <input type="password" placeholder="请重置密码" v-model="usepassword"/></p>
 				</div>
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_08.png" alt="pic "  title="xianju"/>
-					<p> <input type="password" placeholder="请再次确认密码" /></p>
+					<p> <input type="password" placeholder="请再次确认密码" v-model="repassword"/></p>
 				</div>
-				<button type="submit" >重置密码</button>
+				<button type="button" @click="resetpassword" >重置密码</button>
 			</form>
 		</div>
 	</div>
@@ -30,7 +30,35 @@
 	
 <script>
 	export default {
-		name: 'FindPassword'
+		name: 'FindPassword',
+		data(){
+			return{
+			   usetel:'',
+			   usepassword:'',
+			   repassword:''
+			}
+		},
+		methods:{
+			resetpassword:function(){
+			 if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(this.usetel))){
+			    	alert("手机号有误");
+			    	return false;
+			    }
+			    else{
+			    	if(this.usepassword!=this.repassword){
+			    		alert("两次密码不一致");
+			    		return false;
+			    	}
+			    	else{
+			    		var user={usetel:this.usetel,usepassword:this.usepassword};
+			    		localStorage.User=JSON.stringify(user);
+			    		console.log(localStorage.User);
+			    		 this.$router.push('/AppSignIn');
+			    		alert("密码重置成功！可以去登录了");
+			    	}
+			    }
+		    }
+		}
 	}
 </script>
 	

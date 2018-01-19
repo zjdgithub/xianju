@@ -1,0 +1,60 @@
+{
+ "errercode":0,
+ "errermsg":0,
+ "data":{
+	 "start":0,
+	 "count":10,
+	 "total":120,
+	 "subjects":[
+	  {
+		"friendnick":"聊吧小助手",
+        "signature":"个性签名",
+        "head_portrait":"../../../static/chatImg/refs1x.png",
+        "friend_id":"1",
+        "chat_date":"11-9 10:00",
+        "friendlocation":"北京，昌平区",
+        "content":"又到年关，一起聊聊啊",
+        "ref":"refs"
+	 },
+	 {
+		"friendnick":"校友一号",
+        "signature":"个性签名",
+        "head_portrait":"../../../static/chatImg/person1x.png",
+        "friend_id":"2",
+        "chat_date":"11-9 10:00",
+        "friendlocation":"北京，昌平区",
+        "content":"又到年关，一起聊聊啊",
+        "ref":"schoolfriends"
+	 },
+	 {
+		"friendnick":"同行一号",
+        "signature":"个性签名",
+        "head_portrait":"../../../static/chatImg/person2x.png",
+        "friend_id":"3",
+        "chat_date":"11-9 10:00",
+        "friendlocation":"北京，昌平区",
+        "content":"又到年关，一起聊聊啊",
+        "ref":"friends"
+	 },
+	 {
+		"friendnick":"HR",
+        "signature":"个性签名",
+        "head_portrait":"../../../static/chatImg/person3x.png",
+        "friend_id":"4",
+        "chat_date":"11-9 10:00",
+        "friendlocation":"北京，昌平区",
+        "content":"又到年关，一起聊聊啊",
+        "ref":"hr"
+	 },
+	 {
+		"friendnick":"小扎",
+        "signature":"个性签名",
+        "head_portrait":"../../../static/chatImg/person1x.png",
+        "friend_id":"5",
+        "chat_date":"11-9 10:00",
+        "friendlocation":"北京，昌平区",
+        "content":"2018开始拼搏奋斗"
+	 }
+   ]
+ }
+}

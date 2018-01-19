@@ -11,16 +11,16 @@
 			<form action="">
 				<div class="sign_info">
 					<img src="../../../static/img/mine/signIn_03.png" alt="pic "  title="xianju"/>
-					<p> <input type="text" placeholder="请输入手机号" /></p>
+					<p> <input type="text" placeholder="请输入手机号" v-model="useTel"/></p>
 				</div>
 				
 				
 				<div class="sign_info">
 					<img src="../../../static/img/mine/sign_08.png" alt="pic "  title="xianju"/>
-					<p> <input type="password" placeholder="请输入密码" /></p>
+					<p> <input type="password" placeholder="请输入密码" v-model="usepassword"/></p>
 				</div>
 				<router-link :to="{name:'AppFindPass'}" tag="h4">忘记密码？</router-link>
-				<button type="submit" >登录</button>
+				<button type="button"  @click="goHome">登录</button>
 			</form>
 		</div>
 		<div class="foot">
@@ -39,7 +39,24 @@
 	
 <script>
 	export default {
-		name: 'signIn'
+		name: 'signIn',
+		data(){
+			return {
+				useTel:'',
+				usepassword:''
+			}
+		},
+		methods:{
+			goHome:function(){
+				var user=JSON.parse(localStorage.User);
+				if(user.usetel!=this.useTel||user.usepassword!=this.usepassword){
+					alert("账号或密码有误")
+				}
+				else{
+					this.$router.push({path:'./AppMine'})
+				}
+			}
+		}
 	}
 </script>
 	
@@ -48,6 +65,9 @@
 		width:100%;
 		height:100%;
 		background:#fff;
+		overflow:scroll;
+		position: relative;
+		z-index: 9999;
 	   	.signbg{
 	   		width:100%;
 	   		height:3rem;
@@ -69,7 +89,7 @@
       	width:100%;
       	height:2.3rem;
       	background:rgba(255,255,255,0);
-      	margin-top:-0.40rem;
+      	margin-top:-0.60rem;
       	z-index:999;
       	form{
       		height:100%;
@@ -126,7 +146,7 @@
     .foot{
    	width:100%;
    	height:1.3rem;
-   	position: fixed;
+  /* 	position: fixed;*/
    	background:#fff;
    	z-index:9999;
    	bottom:0;
